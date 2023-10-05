@@ -8,7 +8,7 @@
 
 ### Algorithmique
 
-- [ ] (En cours) : Algorithme de Backtracking ([Problème des N Reines](./Algorithmes/src/main/java/fr/simnbernard/vae/algorithmes/backtracking/NQueensProblem.java))
+- [x] : Algorithme de Backtracking ([Problème des N Reines](./Algorithmes/src/main/java/fr/simnbernard/vae/algorithmes/backtracking/NQueensProblem.java))
 
 ### Protocoles réseaux
 
