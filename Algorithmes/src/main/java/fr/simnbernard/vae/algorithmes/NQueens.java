@@ -1,4 +1,4 @@
-package fr.simnbernard.vae.algorithmes.backtracking;
+package fr.simnbernard.vae.algorithmes;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -6,11 +6,17 @@ import java.util.List;
 import java.util.Scanner;
 
 /**
- * Le problème des N reines (https://fr.wikipedia.org/wiki/Problème_des_huit_dames) consiste à
- * déterminer toutes les solutions de placement de N reines sur un échiquier de taille N × N de
- * telle sorte qu’aucune ne soit en prise.
+ * https://fr.wikipedia.org/wiki/Problème_des_huit_dames
  */
-public class NQueensProblem {
+public class NQueens {
+
+  private static final NQueens INSTANCE = new NQueens();
+  private static final Scanner scanner = new Scanner(System.in);
+
+
+  static NQueens getInstance() {
+    return INSTANCE;
+  }
 
   private boolean[][] board;
   private List<boolean[][]> solutions;
@@ -61,7 +67,8 @@ public class NQueensProblem {
     }
   }
 
-  private boolean isPossibleToPutQueenAtPosition(int positionLineIdx, int positionColIdx) {
+  private boolean isPossibleToPutQueenAtPosition(final int positionLineIdx,
+      final int positionColIdx) {
     //check only upper because the algorithm put queens from top to bottom
 
     //check vertical
@@ -90,28 +97,37 @@ public class NQueensProblem {
     return true;
   }
 
-  protected int solve(int queenNb) {
+  int solve(final int queenNb) {
     init(queenNb);
     generateAllPossibleBoardsFromLine(0);
 
     return solutions.size();
   }
 
-  public void solve() {
-    final var scanner = new Scanner(System.in);
-
+  void solve() {
     System.out.print("Combien de reines ? : ");
     final var queenNb = scanner.nextInt();
 
-    System.out.println("Nombre de solution(s) pour " + queenNb + " reines : " + solve(queenNb));
+    System.out.println(
+        "Nombre de solution(s) pour %d reines : ".formatted(queenNb, solve(queenNb)));
 
     if (solutions.isEmpty()) {
       return;
     }
 
     System.out.print("Afficher les résultats ? (y) : ");
-    if (new Scanner(System.in).nextLine().equals("y")) {
+    if (scanner.nextLine().equals("y")) {
       solutions.forEach(this::printBoard);
     }
+  }
+
+  //Voir NQueensProblemTest pour durées
+  public static void main(String[] args) {
+    final var message = "Nombre de possibilité pour %d reines : %d";
+    System.out.println(message.formatted(8, NQueens.getInstance().solve(8)));
+    System.out.println(message.formatted(3, NQueens.getInstance().solve(8)));
+    System.out.println(message.formatted(7, NQueens.getInstance().solve(8)));
+
+    NQueens.getInstance().solve();
   }
 }
