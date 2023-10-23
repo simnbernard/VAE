@@ -1,14 +1,18 @@
 # VAE
 
-> ℹ️ Ce répertoire n'est actuellement pas complet, il sera enrichi d'ici à la soutenance orale de décembre.
+> ℹ️ Ce répertoire sera probablement enrichi d'ici à la soutenance orale de décembre.
 
 **Master GENIAL** (Master Parcours Génie Informatique en Alternance) : [Programme](http://www.informatique.univ-paris-diderot.fr/formations/masters/genial/accueil).
+
+## Rappels
+- [x] : Algorithme de recherche dichotomique ([Binary search](./Algorithmes/src/main/java/fr/simnbernard/vae/algorithmes/BinarySearch.java))
+- [x] : Algorithme de tri ([Tri à bulles](./Algorithmes/src/main/java/fr/simnbernard/vae/algorithmes/TriBulles.java), [Tri par insertion](./Algorithmes/src/main/java/fr/simnbernard/vae/algorithmes/TriInsertion.java))
 
 ## Master 1 
 
 ### Algorithmique
 
-- [x] : Algorithme de Backtracking ([Problème des N Reines](./Algorithmes/src/main/java/fr/simnbernard/vae/algorithmes/NQueensProblem.java))
+- [x] : Algorithme de Backtracking ([Problème des N Reines](./Algorithmes/src/main/java/fr/simnbernard/vae/algorithmes/NQueens.java))
 - [x] : Algorithme Glouton ([Problème du sac à dos (Knapsack)](./Algorithmes/src/main/java/fr/simnbernard/vae/algorithmes/Knapsack.java))
 - [x] : Algorithme de Programmation Dynamique ([Problème du sac à dos (Knapsack)](./Algorithmes/src/main/java/fr/simnbernard/vae/algorithmes/Knapsack.java))
 - [x] : Algorithme de Division et Conquête ([Tri Fusion (Merge Sort)](./Algorithmes/src/main/java/fr/simnbernard/vae/algorithmes/TriFusion.java), [Tri Rapide (Quick Sort)](./Algorithmes/src/main/java/fr/simnbernard/vae/algorithmes/TriRapide.java), [Karatsuba](./Algorithmes/src/main/java/fr/simnbernard/vae/algorithmes/Karatsuba.java))
@@ -37,4 +41,4 @@
 
 ### Calcul haute performance
 
-- [ ] (En cours) : Initiation à la librairie OpenMP en C ([Code source](./OpenMP/ProgrammeOpenMP.c))
+- [x] : Initiation à la librairie OpenMP en C ([Produit matriciel](./OpenMP/ProgrammeOpenMP.c))

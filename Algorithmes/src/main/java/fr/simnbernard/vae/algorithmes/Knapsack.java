@@ -5,6 +5,9 @@ import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 
+/**
+ * https://fr.wikipedia.org/wiki/Probl%C3%A8me_du_sac_%C3%A0_dos
+ */
 public class Knapsack {
 
   private static final Knapsack INSTANCE = new Knapsack();

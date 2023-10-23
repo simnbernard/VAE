@@ -3,6 +3,9 @@ package fr.simnbernard.vae.algorithmes;
 import java.math.BigInteger;
 import org.apache.commons.lang3.StringUtils;
 
+/**
+ * https://fr.wikipedia.org/wiki/Algorithme_de_Karatsuba
+ */
 public class Karatsuba {
 
   private static final Karatsuba INSTANCE = new Karatsuba();
